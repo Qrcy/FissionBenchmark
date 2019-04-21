@@ -14,5 +14,5 @@ for function in "${functions[@]}"
 do
     echo -e "Benchmarking $function\n"
     echo -e "hey-summary\n"
-    hey -c $connections -z $time -m POST -d '{"id":"44444"}' http://$fissionrouter/$function > ./$function.$connection.$time.$datetime.hey.txt
+    hey -c $connections -z $times -m POST -d '{"id":"44444"}' http://$fissionrouter/$function > ./$function.$connection.$times.$datetime.hey.txt
 done

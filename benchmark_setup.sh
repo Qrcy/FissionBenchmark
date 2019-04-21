@@ -15,8 +15,8 @@ HEY_INSTALLED=$(which hey)
 if [ "$HEY_INSTALLED" = "" ]
 then
         apt update
-        add-apt-repository ppa:longsleep/golang-backports
-        sudo apt-get update
-        sudo apt-get install golang-go-1.12 
+        add-apt-repository ppa:longsleep/golang-backports -y
+        apt-get update -y
+        apt  install golang-go -y
         go get -u github.com/rakyll/hey
 fi
