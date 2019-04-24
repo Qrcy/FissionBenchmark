@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir logs
+
 WRK_INSTALLED=$(which wrk)
 if [ "$WRK_INSTALLED" = "" ]
 then
@@ -14,11 +16,10 @@ fi
 HEY_INSTALLED=$(which hey)
 if [ "$HEY_INSTALLED" = "" ]
 then
-        apt update
+        apt-get update
         add-apt-repository ppa:longsleep/golang-backports -y
         apt-get update -y
-        ##apt  install golang-go -y
-        wget https://dl.google.com/go/go1.12.4.linux-amd64.tar.gz
-        tar -C /usr/local -xzf go1.12.4.linux-amd64.tar.gz
+        apt  install golang-go -y
         go get -u github.com/rakyll/hey
+        cp $HOME/go/bin/hey /usr/local/bin
 fi

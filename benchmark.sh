@@ -6,8 +6,8 @@
 
 functions=(hellojava hellogo hellopython primjava)
 connections=(50)
-times=(5m)
-fissionrouter="node1:32631"
+times=(1m)
+fissionrouter="node1:32695"
 
 echo -e "Benchmarking functions\n"
 for function in "${functions[@]}"
