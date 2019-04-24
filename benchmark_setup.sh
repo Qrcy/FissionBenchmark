@@ -17,6 +17,8 @@ then
         apt update
         add-apt-repository ppa:longsleep/golang-backports -y
         apt-get update -y
-        apt  install golang-go -y
+        ##apt  install golang-go -y
+        wget https://dl.google.com/go/go1.12.4.linux-amd64.tar.gz
+        tar -C /usr/local -xzf go1.12.4.linux-amd64.tar.gz
         go get -u github.com/rakyll/hey
 fi
