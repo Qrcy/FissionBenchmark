@@ -16,19 +16,19 @@ echo -e "Benchmarking functions GET\n"
 for functionGET in "${functionsGET[@]}"
 do
     echo -e "Benchmarking $functionGET\n"
-    hey -c $connections -z $times -m GET http://$fissionrouter/$functionGET > ./logs/$functionGET.hey.txt
+    hey -c $connections -z $times -m GET http://$fissionrouter/$functionGET > ./logs/$functionGET.$now.hey.txt
 done
 
 echo -e "Benchmarking functions POST\n"
 for functionPOST in "${functionsPOST[@]}"
 do
     echo -e "Benchmarking $functionPOST\n"
-    hey -c $connections -z $times -m POST -d '{"id":"44444"}' http://$fissionrouter/$functionPOST > ./logs/$functionPOST.hey.txt
+    hey -c $connections -z $times -m POST -d '{"id":"45"}' http://$fissionrouter/$functionPOST > ./logs/$functionPOST.$now.hey.txt
 done
 
 echo -e "Benchmarking functions GET\n"
 for functionGET in "${functionsGET[@]}"
 do
     echo -e "Benchmarking $functionGET\n"
-    hey -c $connections -z $times -m GET http://$fissionrouter/$functionGET > ./logs/$functionGET.hey.txt
+    hey -c $connections -z $times -m GET http://$fissionrouter/$functionGET > ./logs/$functionGET.$now.hey.txt
 done
