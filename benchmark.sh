@@ -10,7 +10,7 @@ functionsGET2=(kmatrixjava kmatrixgo kmatrixpython)
 connections=(50)
 times=(1m)
 now=$(date +"%d/%m/%Y %H:%M:%S")
-fissionrouter="node1:32695"
+fissionrouter="192.168.0.10:30260"
 
 echo -e "Benchmarking functions GET\n"
 for functionGET in "${functionsGET[@]}"
